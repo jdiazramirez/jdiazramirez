@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorText">
+    <TextView
+        android:id="@+id/txt_fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:text="Fecha"
+        android:textColor="@color/colorNegro"
+        android:textSize="15sp"
+        android:fontFamily="@font/raleway_mdium"/>
+    <EditText
+        android:id="@+id/edt_fecha"
+        android:layout_below="@+id/txt_fecha"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/edt_gris"
+        android:drawableLeft="@drawable/calendario"
+        android:drawablePadding="5dp"
+        android:editable="false"
+        android:clickable="false"
+        android:paddingLeft="10dp"
+        android:textColor="@color/colorNegro"
+        android:textColorHint="@color/colorNegro"
+        android:textSize="16dp" />
+    <TextView
+        android:id="@+id/txt_centro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/txt_fecha"
+        android:layout_alignLeft="@id/edt_centro"
+        android:text="Centro"
+        android:textColor="@color/colorNegro"
+        android:textSize="15sp"
+        android:fontFamily="@font/raleway_mdium"/>
+    <Spinner
+        android:id="@+id/edt_centro"
+        android:layout_width="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="45dp"
+        android:padding="5dp"
+        android:layout_alignTop="@+id/edt_fecha"
+        android:background="@drawable/edt_gris"
+        android:textSize="12sp" />
+    <ProgressBar
+        android:id="@+id/progressBarcentro"
+        style="?android:attr/progressBarStyleLarge"
+        android:visibility="invisible"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:layout_alignTop="@+id/edt_fecha"/>
+    <TextView
+        android:id="@+id/txt_almacen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/edt_almacen"
+        android:layout_toEndOf="@+id/edt_centro"
+        android:text="Almacén"
+        android:textColor="@color/colorNegro"
+        android:textSize="15sp"
+        android:fontFamily="@font/raleway_mdium"/>
+
+    <Spinner
+        android:id="@+id/edt_almacen"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignTop="@id/edt_centro"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/edt_gris"
+        android:padding="5dp"
+        android:textSize="12sp" />
+    <ProgressBar
+        android:id="@+id/progressBaralmacen"
+        style="?android:attr/progressBarStyleLarge"
+        android:visibility="invisible"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_alignLeft="@id/edt_almacen"
+        android:layout_marginLeft="40dp"
+        android:layout_alignTop="@+id/edt_fecha"/>
+
+    <TextView
+        android:id="@+id/txt_tipo_merma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_almacen"
+        android:layout_alignLeft="@+id/edt_fecha"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/raleway_mdium"
+        android:text="Clase movimiento"
+        android:textColor="@color/colorNegro"
+        android:textSize="15sp" />
+
+    <Spinner
+        android:id="@+id/edt_tipo_merma"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@+id/txt_tipo_merma"
+        android:layout_alignLeft="@id/txt_tipo_merma"
+        android:layout_alignRight="@+id/edt_almacen"
+        android:background="@drawable/edt_gris"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:textColor="@color/colorNegro"
+        android:textColorHint="@color/colorText"
+        android:textSize="12sp" />
+    <ProgressBar
+        android:id="@+id/progressBarclase"
+        style="?android:attr/progressBarStyleLarge"
+        android:visibility="invisible"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="4dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/edt_tipo_merma"/>
+    <RelativeLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_tipo_merma"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/caja_formulario">
+
+        <TextView
+            android:id="@+id/txt_producto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/raleway_mdium"
+            android:text="Producto"
+            android:textColor="@color/colorNegro"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edt_producto"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/txt_producto"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edt_blanco"
+            android:ems="10"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorNegro"
+            android:textColorHint="@color/colorText"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/btn_scanear"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/edt_producto"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="25dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btn_naranjo"
+            android:drawableLeft="@drawable/barcode"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/raleway_extrabold"
+            android:onClick="onClick"
+            android:padding="6dp"
+            android:text="scanear"
+            android:textColor="#fff"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_cantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_producto"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/raleway_mdium"
+            android:text="Cantidad cajas"
+            android:textColor="@color/colorNegro"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edt_cantidad"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/txt_cantidad"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edt_blanco"
+            android:ems="10"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:text="0"
+            android:textColor="@color/colorNegro"
+            android:textColorHint="@color/colorText"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txt_unidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btn_scanear"
+            android:layout_alignTop="@+id/txt_cantidad"
+            android:fontFamily="@font/raleway_mdium"
+            android:text="Cantidad botellas"
+            android:textColor="@color/colorNegro"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edt_unidad"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@+id/txt_unidad"
+            android:layout_alignTop="@id/edt_cantidad"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edt_blanco"
+            android:ems="10"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:text="0"
+            android:textColor="@color/colorNegro"
+            android:textColorHint="@color/colorText"
+            android:textSize="16dp" />
+
+
+        <TextView
+            android:id="@+id/txt_motivo_merma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_unidad"
+            android:layout_alignLeft="@+id/edt_cantidad"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/raleway_mdium"
+            android:text="Motivo"
+            android:textColor="@color/colorNegro"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edt_motivo_merma"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/txt_motivo_merma"
+            android:layout_alignLeft="@id/edt_cantidad"
+            android:layout_alignRight="@+id/edt_unidad"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/edt_blanco"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorNegro"
+            android:textColorHint="@color/colorText"
+            android:textSize="16dp" />
+
+        <ImageView
+            android:id="@+id/edt_imagen"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/edt_motivo_merma"
+            android:layout_alignLeft="@id/edt_motivo_merma"
+            android:layout_alignRight="@id/edt_imagen"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginRight="0dp"
+            android:background="@drawable/edt_blanco"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorNegro"
+            android:textColorHint="@color/colorText"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/btn_adj_imagen"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@+id/edt_imagen"
+            android:layout_marginLeft="5dp"
+            android:layout_toEndOf="@id/edt_imagen"
+            android:background="@drawable/btn_azul"
+            android:drawableLeft="@drawable/camara"
+            android:drawablePadding="10dp"
+            android:fontFamily="@font/raleway_extrabold"
+            android:onClick="onClick"
+            android:padding="6dp"
+            android:text="ADJUNTAR"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/limpiar_adj_imagen"
+            android:layout_width="120dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/btn_adj_imagen"
+            android:layout_alignLeft="@id/btn_adj_imagen"
+            android:layout_marginTop="3dp"
+            android:layout_marginRight="5dp"
+            android:layout_toEndOf="@id/edt_imagen"
+            android:background="@drawable/btn_rojo_form"
+            android:fontFamily="@font/raleway_extrabold"
+            android:onClick="onClick"
+            android:padding="6dp"
+            android:text="QUITAR ADJ."
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_agregar"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/edt_imagen"
+            android:layout_alignLeft="@id/edt_cantidad"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/btn_verde"
+            android:fontFamily="@font/raleway_extrabold"
+            android:onClick="onClick"
+            android:text="agregar"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_cancelar"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_alignTop="@+id/btn_agregar"
+            android:layout_alignRight="@+id/edt_motivo_merma"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btn_gris"
+            android:fontFamily="@font/raleway_extrabold"
+            android:onClick="onClick"
+            android:text="CANCELAR"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+    <ScrollView
+        android:id="@+id/scrolltable"
+        android:layout_below="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="50dp"
+        android:layout_alignLeft="@+id/frame"
+        android:layout_alignRight="@+id/frame"
+        android:background="@drawable/table_body"
+        android:scrollbars="vertical|horizontal">
+            <TableLayout
+                android:id="@+id/table_producto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="1dp"
+                android:isScrollContainer="true"
+                android:scrollbars="horizontal|vertical"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:background="@drawable/table_header"
+                    android:divider="@color/colorNegro"
+                    android:padding="6dp"
+                    android:showDividers="middle">
+                    <TextView
+                        android:fontFamily="@font/raleway_mdium"
+                        android:padding="5dp"
+                        android:text="ACCIÓN"
+                        android:textColor="#000" />
+                    <TextView
+                        android:fontFamily="@font/raleway_mdium"
+                        android:padding="5dp"
+                        android:text="PRODUCTO"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:fontFamily="@font/raleway_mdium"
+                        android:padding="5dp"
+                        android:text="CAJAS"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:fontFamily="@font/raleway_mdium"
+                        android:padding="5dp"
+                        android:text="BOTELLAS"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:fontFamily="@font/raleway_mdium"
+                        android:padding="5dp"
+                        android:text="CLS.MOV"
+                        android:textColor="#000" />
+                    <TextView android:visibility="gone"/>
+                    <ImageView android:visibility="gone"/>
+                </TableRow>
+            </TableLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/btn_enviar_data"
+        android:layout_width="wrap_content"
+        android:padding="10dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="3dp"
+        android:layout_marginBottom="3dp"
+        android:layout_alignRight="@+id/frame"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_verde"
+        android:fontFamily="@font/raleway_extrabold"
+        android:onClick="onClick"
+        android:text="ENVIAR SOLICITUD"
+        android:textColor="#fff"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+</RelativeLayout>

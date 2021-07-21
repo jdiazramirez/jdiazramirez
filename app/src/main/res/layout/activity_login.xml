@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <RelativeLayout
+        android:id="@+id/form"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="@color/fondo">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/logo"
+            />
+        <EditText
+            android:layout_below="@id/logo"
+            android:text=""
+            android:id="@+id/edt_usuario"
+            android:layout_width="320dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/edt_login"
+            android:drawableLeft="@drawable/usuario"
+            android:drawablePadding="10dp"
+            android:ems="10"
+            android:hint="Usuario"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorText"
+            android:textSize="20dp"
+            android:padding="20dp"
+            android:fontFamily="@font/raleway_extrabold" />
+
+        <EditText
+            android:id="@+id/edt_clave"
+            android:text=""
+            android:layout_centerHorizontal="true"
+            android:layout_width="320dp"
+            android:layout_height="60dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/edt_usuario"
+            android:background="@drawable/edt_login"
+            android:drawableLeft="@drawable/desbloquear"
+            android:drawablePadding="10dp"
+            android:ems="12"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorText"
+            android:textSize="20dp"
+            android:padding="20dp"
+            android:fontFamily="@font/raleway_extrabold"/>
+
+
+        <LinearLayout
+            android:id="@+id/botones"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/edt_clave"
+            android:orientation="horizontal"
+            android:gravity="center"
+
+            >
+
+            <Button
+                android:id="@+id/btn_salir"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/btn_rojo"
+                android:fontFamily="@font/raleway_extrabold"
+                android:onClick="onClick"
+                android:text="LIMPIAR"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <Button
+                android:id="@+id/btn_entrar"
+                android:layout_width="150dp"
+                android:layout_height="45dp"
+                android:background="@drawable/btn_blanco"
+                android:onClick="onClick"
+                android:text="INGRESAR"
+                android:textColor="@color/fondo"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:fontFamily="@font/raleway_extrabold"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyleLarge"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

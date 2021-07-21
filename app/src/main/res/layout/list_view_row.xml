@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edt_fecha"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/caja_consulta">
+        <TextView
+            android:id="@+id/txt_centro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_alignLeft="@id/btn_scanear"
+            android:fontFamily="@font/raleway_mdium"
+            android:text="Centro"
+            android:textColor="@color/colorNegro"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edt_centro"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@id/edt_fol_sol"
+            android:layout_alignLeft="@id/txt_centro"
+            android:background="@drawable/edt_blanco"
+            android:ems="10"
+            android:enabled="false"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorNegro"
+            android:textColorHint="@color/colorText"
+            android:textSize="16dp" />
+        <TextView
+            android:id="@+id/txt_fol_sol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/raleway_mdium"
+            android:text="Folio Solicitud"
+            android:textColor="@color/colorNegro"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edt_fol_sol"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/txt_fol_sol"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edt_blanco"
+            android:ems="10"
+            android:enabled="false"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorNegro"
+            android:textColorHint="@color/colorText"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txt_almacen_con"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_fol_sol"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/raleway_mdium"
+            android:text="Almacén"
+            android:textColor="@color/colorNegro"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edt_producto"
+            android:enabled="false"
+            android:clickable="false"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:layout_below="@+id/txt_almacen_con"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edt_blanco"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorNegro"
+            android:textColorHint="@color/colorText"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txt_almacen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btn_scanear"
+            android:layout_alignTop="@id/txt_almacen_con"
+            android:fontFamily="@font/raleway_mdium"
+            android:text="Producto"
+            android:textColor="@color/colorNegro"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/btn_scanear"
+            android:enabled="false"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignTop="@+id/edt_producto"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/edt_blanco"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorNegro"
+            android:textColorHint="@color/colorText"
+            android:textSize="16dp" />
+        <TextView
+            android:id="@+id/txt_pro_nombre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_producto"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/raleway_mdium"
+            android:text="Nombre Producto"
+            android:textColor="@color/colorNegro"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edt_pro_nombre"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/txt_pro_nombre"
+            android:layout_marginStart="10dp"
+            android:layout_alignRight="@id/btn_scanear"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edt_blanco"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorNegro"
+            android:textColorHint="@color/colorText"
+            android:textSize="16dp" />
+        <TextView
+            android:id="@+id/txt_cantidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_pro_nombre"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/raleway_mdium"
+            android:text="Cantidad cajas"
+            android:textColor="@color/colorNegro"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edt_cantidad"
+            android:enabled="false"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/txt_cantidad"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/edt_blanco"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorNegro"
+            android:textColorHint="@color/colorText"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txt_unidad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btn_scanear"
+            android:layout_alignTop="@+id/txt_cantidad"
+            android:fontFamily="@font/raleway_mdium"
+            android:text="Cantidad botellas"
+            android:textColor="@color/colorNegro"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edt_unidad"
+            android:enabled="false"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_alignLeft="@+id/txt_unidad"
+            android:layout_alignTop="@id/edt_cantidad"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/edt_blanco"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorNegro"
+            android:textColorHint="@color/colorText"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txt_tipo_merma_con"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edt_cantidad"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/raleway_mdium"
+            android:text="Clase movimiento"
+            android:textColor="@color/colorNegro"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edt_tipo_merma_con"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:padding="5dp"
+            android:layout_below="@+id/txt_tipo_merma_con"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_alignRight="@+id/edt_unidad"
+            android:background="@drawable/edt_blanco"
+            android:ems="10"
+            android:clickable="false"
+            android:inputType="textPersonName"
+            android:textColor="@color/colorNegro"
+            android:textColorHint="@color/colorText"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txt_motivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_tipo_merma_con"
+            android:layout_alignLeft="@+id/edt_cantidad"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/raleway_mdium"
+            android:text="Motivo"
+            android:textColor="@color/colorNegro"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edt_motivo"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/txt_motivo"
+            android:layout_alignLeft="@id/edt_cantidad"
+            android:layout_alignRight="@+id/edt_unidad"
+            android:background="@drawable/edt_blanco"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorNegro"
+            android:textColorHint="@color/colorText"
+            android:textSize="16dp" />
+        <TextView
+            android:id="@+id/txt_estado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_motivo"
+            android:layout_alignLeft="@+id/edt_cantidad"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/raleway_mdium"
+            android:text="Estado"
+            android:textColor="@color/colorNegro"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edt_estado"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_below="@+id/txt_estado"
+            android:layout_alignLeft="@id/edt_cantidad"
+            android:layout_alignRight="@+id/edt_unidad"
+            android:background="@drawable/edt_blanco"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorText"
+            android:textColorHint="@color/colorText"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/txt_adj"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edt_estado"
+            android:layout_alignLeft="@+id/edt_cantidad"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/raleway_mdium"
+            android:text="Sustento adjunto"
+            android:textColor="@color/colorNegro"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/edt_adj"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/txt_adj"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/edt_blanco"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:textColor="@color/colorNegro"
+            android:textColorHint="@color/colorText"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/btn_modificar"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_below="@id/edt_adj"
+            android:layout_alignRight="@id/edt_cantidad"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/btn_verde"
+            android:fontFamily="@font/raleway_extrabold"
+            android:onClick="onClick"
+            android:text="MODIFICAR"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_eliminar"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_alignLeft="@+id/edt_unidad"
+            android:layout_alignTop="@+id/btn_modificar"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/btn_rojo_form"
+            android:fontFamily="@font/raleway_extrabold"
+            android:onClick="onClick"
+            android:text="ELIMINAR"
+            android:textColor="#fff"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>
